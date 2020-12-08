@@ -312,7 +312,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CQQYXL5T6U;
-				INFOPLIST_FILE = PracticaFundamentosiOS/Info.plist;
+				INFOPLIST_FILE = PracticaFundamentosiOS/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CQQYXL5T6U;
-				INFOPLIST_FILE = PracticaFundamentosiOS/Info.plist;
+				INFOPLIST_FILE = PracticaFundamentosiOS/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
