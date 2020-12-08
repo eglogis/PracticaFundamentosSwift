@@ -35,17 +35,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Kks-Qj-tI5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XPg-yz-8hU">
-                                <rect key="frame" x="188.5" y="749" width="37" height="37"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XPg-yz-8hU" secondAttribute="bottom" constant="76" id="5E9-yH-odZ"/>
-                            <constraint firstItem="XPg-yz-8hU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5d5-m9-P3f"/>
                             <constraint firstItem="Kks-Qj-tI5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OA7-yO-0FZ"/>
                             <constraint firstItem="Kks-Qj-tI5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QQZ-7R-3e0"/>
                             <constraint firstItem="Kks-Qj-tI5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aEV-5y-aBz"/>
@@ -53,9 +46,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oPr-3n-fg5"/>
-                    <connections>
-                        <outlet property="loading" destination="XPg-yz-8hU" id="8lj-IV-Pl3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

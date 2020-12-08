@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285625DA25800C3B0016A0E5 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 285625D925800C3A0016A0E5 /* loading.json */; };
+		28687E50257FEF0300D50CE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 28687E4F257FEF0300D50CE5 /* Lottie */; };
 		2869E12B257F94A9002A4641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869E12A257F94A9002A4641 /* AppDelegate.swift */; };
 		2869E12D257F94A9002A4641 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869E12C257F94A9002A4641 /* SceneDelegate.swift */; };
 		2869E12F257F94A9002A4641 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869E12E257F94A9002A4641 /* MainViewController.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		285625D925800C3A0016A0E5 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		2869E127257F94A9002A4641 /* PracticaFundamentosiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaFundamentosiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2869E12A257F94A9002A4641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2869E12C257F94A9002A4641 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,12 +36,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28687E50257FEF0300D50CE5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28687E52257FF3D400D50CE5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				285625D925800C3A0016A0E5 /* loading.json */,
+				2869E133257F94A9002A4641 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		2869E11E257F94A9002A4641 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +72,7 @@
 		2869E129257F94A9002A4641 /* PracticaFundamentosiOS */ = {
 			isa = PBXGroup;
 			children = (
+				28687E52257FF3D400D50CE5 /* Assets */,
 				2869E141257F9550002A4641 /* Views */,
 				2869E140257F953C002A4641 /* Controllers */,
 				2869E13F257F9519002A4641 /* App */,
@@ -69,7 +83,6 @@
 		2869E13F257F9519002A4641 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2869E133257F94A9002A4641 /* Assets.xcassets */,
 				2869E138257F94A9002A4641 /* Info.plist */,
 				2869E12C257F94A9002A4641 /* SceneDelegate.swift */,
 				2869E12A257F94A9002A4641 /* AppDelegate.swift */,
@@ -120,6 +133,9 @@
 			dependencies = (
 			);
 			name = PracticaFundamentosiOS;
+			packageProductDependencies = (
+				28687E4F257FEF0300D50CE5 /* Lottie */,
+			);
 			productName = PracticaFundamentosiOS;
 			productReference = 2869E127257F94A9002A4641 /* PracticaFundamentosiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 2869E11E257F94A9002A4641;
+			packageReferences = (
+				28687E4E257FEF0300D50CE5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 2869E128257F94A9002A4641 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285625DA25800C3B0016A0E5 /* loading.json in Resources */,
 				2869E137257F94A9002A4641 /* LaunchScreen.storyboard in Resources */,
 				2869E134257F94A9002A4641 /* Assets.xcassets in Resources */,
 				2869E132257F94A9002A4641 /* Main.storyboard in Resources */,
@@ -405,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28687E4E257FEF0300D50CE5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LottieFiles/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28687E4F257FEF0300D50CE5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28687E4E257FEF0300D50CE5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2869E11F257F94A9002A4641 /* Project object */;
 }
