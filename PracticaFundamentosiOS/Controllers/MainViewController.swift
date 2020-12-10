@@ -34,10 +34,13 @@ class MainViewController: UIViewController {
     
     // MARK: - Metodos privados
     private func navigateToHomeView() {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) { [weak self] in
             self?.animationView?.isHidden = true
             self?.animationView?.stop()
+            let homeStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+            if let destination = homeStoryBoard.instantiateInitialViewController() {
+                self?.navigationController?.setViewControllers([destination], animated: true)
+            }
         }
     }
     
