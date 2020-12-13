@@ -7,8 +7,8 @@
 
 import Foundation
 
-class CharacterRepository {
-    let characters = [Character(image: "img_iron_man",
+class HeroRepository {
+    let heros = [Character(image: "img_iron_man",
                                 heroName: "Iron man",
                                 realName: "Tony Stark",
                                 longDescription: "",

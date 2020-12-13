@@ -15,7 +15,7 @@ class HeroViewController: UIViewController {
     
     // MARK: - Propiedades privadas
     private let HERO_CELL_VIEW_NAME = "HeroCellView"
-    private let characterRepository = CharacterRepository()
+    private let heroRepository = HeroRepository()
     private var heros: Characters = []
     var herosCount: Int {
         return heros.count
@@ -31,7 +31,7 @@ class HeroViewController: UIViewController {
     
     // MARK: - Private functions
     private func loadHeroData() {
-        heros = characterRepository.characters
+        heros = heroRepository.heros
     }
 }
 
@@ -47,7 +47,7 @@ extension HeroViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let heroCell = tableView.dequeueReusableCell(withIdentifier: "HeroCellView", for: indexPath) as? HeroCellView
+        let heroCell = tableView.dequeueReusableCell(withIdentifier: HERO_CELL_VIEW_NAME, for: indexPath) as? HeroCellView
         
         if(indexPath.row < herosCount) {
             heroCell?.configureViews(hero: heros[indexPath.row])
