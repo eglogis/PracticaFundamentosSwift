@@ -12,6 +12,7 @@
 		2840A17F25858804004C0143 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A17E25858804004C0143 /* HeroCellView.swift */; };
 		2851D8C2258633660019BD2F /* VillainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851D8C1258633660019BD2F /* VillainCellView.swift */; };
 		2851D8C6258635930019BD2F /* VillainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851D8C5258635930019BD2F /* VillainRepository.swift */; };
+		2851D8CC25864D350019BD2F /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851D8CB25864D350019BD2F /* CharacterDetailsViewController.swift */; };
 		285625DA25800C3B0016A0E5 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 285625D925800C3A0016A0E5 /* loading.json */; };
 		28687E50257FEF0300D50CE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 28687E4F257FEF0300D50CE5 /* Lottie */; };
 		2869E12B257F94A9002A4641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869E12A257F94A9002A4641 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 		2840A17E25858804004C0143 /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		2851D8C1258633660019BD2F /* VillainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainCellView.swift; sourceTree = "<group>"; };
 		2851D8C5258635930019BD2F /* VillainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainRepository.swift; sourceTree = "<group>"; };
+		2851D8CB25864D350019BD2F /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterDetailsViewController.swift; path = PracticaFundamentosiOS/Controllers/CharacterDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		285625D925800C3A0016A0E5 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		2869E127257F94A9002A4641 /* PracticaFundamentosiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaFundamentosiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2869E12A257F94A9002A4641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				2840A17D258587D1004C0143 /* Cells */,
 				2869E12E257F94A9002A4641 /* MainViewController.swift */,
+				2851D8CB25864D350019BD2F /* CharacterDetailsViewController.swift */,
 				28F7D4AD25828AD80094E92B /* HeroViewController.swift */,
 				28F7D4B025828B720094E92B /* VillainsViewController.swift */,
 			);
@@ -272,6 +275,7 @@
 				2840A17525858131004C0143 /* Character.swift in Sources */,
 				2869E12F257F94A9002A4641 /* MainViewController.swift in Sources */,
 				28F7D4B125828B720094E92B /* VillainsViewController.swift in Sources */,
+				2851D8CC25864D350019BD2F /* CharacterDetailsViewController.swift in Sources */,
 				2840A17A2585837C004C0143 /* HeroRepository.swift in Sources */,
 				2869E12B257F94A9002A4641 /* AppDelegate.swift in Sources */,
 				2840A17F25858804004C0143 /* HeroCellView.swift in Sources */,

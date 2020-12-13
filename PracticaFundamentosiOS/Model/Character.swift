@@ -15,5 +15,5 @@ struct Character {
     var realName: String = ""
     var longDescription: String = ""
     var shortDescription: String = ""
-    var power: Int = 0
+    var power: Float = 0.0
 }

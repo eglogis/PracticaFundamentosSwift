@@ -15,6 +15,7 @@ class VillainsViewController: UIViewController {
     
     // MARK: - Propiedades privadas
     private let VILLAIN_CELL_VIEW_NAME = "VillainCellView"
+    private let SEGUE_FROM_VILLAINS_TO_DETAILS = "SEGUE_FROM_VILLAINS_TO_DETAIL"
     private let villainRepository = VillainRepository()
     private var villains: Characters = []
     var villainsCount: Int {
@@ -27,6 +28,14 @@ class VillainsViewController: UIViewController {
         loadVillainData()
         villainList?.dataSource = self
         villainList?.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? CharacterDetailsViewController,
+              let data = sender as? Character else {
+            return
+        }
+        destination.character = data
     }
     
     // MARK: - Private functions
@@ -53,5 +62,11 @@ extension VillainsViewController: UITableViewDelegate, UITableViewDataSource {
             villainCell?.configureViews(villain: villains[indexPath.row])
         }
         return villainCell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row < villainsCount) {
+            performSegue(withIdentifier: SEGUE_FROM_VILLAINS_TO_DETAILS, sender: villains[indexPath.row])
+        }
     }
 }

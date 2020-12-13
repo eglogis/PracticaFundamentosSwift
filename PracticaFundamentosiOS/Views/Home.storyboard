@@ -31,7 +31,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_octopus" translatesAutoresizingMaskIntoConstraints="NO" id="yVV-7M-Sgu">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                                 </imageView>
-                                                <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yI-F6-WBO">
+                                                <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yI-F6-WBO">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
@@ -70,6 +70,7 @@
                     <tabBarItem key="tabBarItem" title="Villains" image="burn" catalog="system" id="7Iw-GJ-eq7"/>
                     <connections>
                         <outlet property="villainList" destination="Clq-qX-RAf" id="1jD-C7-ern"/>
+                        <segue destination="EPs-qX-e2b" kind="show" identifier="SEGUE_FROM_VILLAINS_TO_DETAIL" id="4M4-Wm-dDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oA-AA-kJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,14 +99,14 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_iron_man" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-lQ-myk">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                                 </imageView>
-                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c31-vk-24d">
+                                                <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c31-vk-24d">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iron man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZ0-rK-t5d">
                                                     <rect key="frame" x="137" y="105" width="140.5" height="38.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -144,16 +145,128 @@
                     <tabBarItem key="tabBarItem" title="Heros" image="star.circle.fill" catalog="system" id="61F-Pv-KcV"/>
                     <connections>
                         <outlet property="heroList" destination="EAe-lj-dCE" id="V7V-VV-6st"/>
+                        <segue destination="EPs-qX-e2b" kind="show" identifier="SEGUE_FROM_HERO_TO_DETAIL" id="q0q-ur-uhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzc-6c-L5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371.01449275362324" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="-396" y="-349"/>
         </scene>
-        <!--Marvel Heros & Villains-->
+        <!--Character Details View Controller-->
+        <scene sceneID="OH4-I3-NKd">
+            <objects>
+                <viewController id="EPs-qX-e2b" customClass="CharacterDetailsViewController" customModule="PracticaFundamentosiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kk4-0F-2Xx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSa-ns-Ndz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_iron_man" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-Ld-0yV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="274"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Qai-Ld-0yV" secondAttribute="height" multiplier="207:137" id="OKP-46-U4j"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iron Man" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwR-51-SOw">
+                                        <rect key="frame" x="16" y="290" width="382" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre real:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAv-NH-5cq">
+                                        <rect key="frame" x="16" y="358" width="382" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tony Stark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4h-wq-PXe">
+                                        <rect key="frame" x="16" y="390" width="382" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poder:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rob-9c-Ps1">
+                                        <rect key="frame" x="16" y="431" width="382" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-7p-HPA">
+                                        <rect key="frame" x="16" y="463" width="198" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemIndigoColor"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q86-Mc-rsz">
+                                        <rect key="frame" x="16" y="487" width="382" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3BW-na-FVh">
+                                        <rect key="frame" x="16" y="519" width="382" height="239"/>
+                                        <mutableString key="text">Anthony Edward Stark, conocido como Tony Stark, un multimillonario magnate empresarial estadounidense, playboy e ingenioso científico, quien sufrió una grave lesión en el pecho durante un secuestro. Cuando sus captores intentan forzarlo a construir un arma de destrucción masiva crea, en cambio, una armadura poderosa para salvar su vida y escapar del cautiverio. Más tarde, Stark desarrolla su traje, agregando armas y otros dispositivos tecnológicos que diseñó a través de su compañía, Industrias Stark. Él usa el traje y las versiones sucesivas para proteger al mundo como Iron Man. Aunque al principio ocultó su verdadera identidad, Stark finalmente declaró que era, de hecho, Iron Man en un anuncio público.</mutableString>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75985720059999995" green="0.8012550276" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yAv-NH-5cq" secondAttribute="trailing" constant="16" id="0aK-mJ-4yW"/>
+                                    <constraint firstAttribute="trailing" secondItem="q86-Mc-rsz" secondAttribute="trailing" constant="16" id="5fv-0h-xy4"/>
+                                    <constraint firstAttribute="trailing" secondItem="3BW-na-FVh" secondAttribute="trailing" constant="16" id="7KT-IW-yok"/>
+                                    <constraint firstItem="Qai-Ld-0yV" firstAttribute="top" secondItem="oSa-ns-Ndz" secondAttribute="top" id="B6k-bG-zp6"/>
+                                    <constraint firstItem="3BW-na-FVh" firstAttribute="top" secondItem="q86-Mc-rsz" secondAttribute="bottom" constant="8" id="CDc-ZK-M6s"/>
+                                    <constraint firstItem="rob-9c-Ps1" firstAttribute="top" secondItem="C4h-wq-PXe" secondAttribute="bottom" constant="20" id="IrX-fD-Ymf"/>
+                                    <constraint firstItem="SwR-51-SOw" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="OLk-iC-KPf"/>
+                                    <constraint firstItem="yAv-NH-5cq" firstAttribute="top" secondItem="SwR-51-SOw" secondAttribute="bottom" constant="32" id="Pc6-My-j0z"/>
+                                    <constraint firstItem="ShW-7p-HPA" firstAttribute="top" secondItem="rob-9c-Ps1" secondAttribute="bottom" constant="8" id="Q5d-lw-txb"/>
+                                    <constraint firstItem="SwR-51-SOw" firstAttribute="top" secondItem="Qai-Ld-0yV" secondAttribute="bottom" constant="16" id="UI1-dm-Qfm"/>
+                                    <constraint firstItem="3BW-na-FVh" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="VZ6-Yz-ghf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qai-Ld-0yV" secondAttribute="trailing" id="XlV-2D-d0f"/>
+                                    <constraint firstAttribute="bottom" secondItem="3BW-na-FVh" secondAttribute="bottom" constant="50" id="Z1s-Vl-433"/>
+                                    <constraint firstItem="rob-9c-Ps1" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="ctA-pd-xUm"/>
+                                    <constraint firstItem="q86-Mc-rsz" firstAttribute="top" secondItem="ShW-7p-HPA" secondAttribute="bottom" constant="20" id="fW1-pt-31E"/>
+                                    <constraint firstItem="ShW-7p-HPA" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="kiZ-37-NB3"/>
+                                    <constraint firstItem="q86-Mc-rsz" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="kvX-4o-Fbo"/>
+                                    <constraint firstItem="yAv-NH-5cq" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="ndb-fC-zVv"/>
+                                    <constraint firstItem="C4h-wq-PXe" firstAttribute="top" secondItem="yAv-NH-5cq" secondAttribute="bottom" constant="8" id="pKQ-VQ-jrC"/>
+                                    <constraint firstAttribute="trailing" secondItem="ShW-7p-HPA" secondAttribute="trailing" constant="200" id="rGl-VX-iL4"/>
+                                    <constraint firstAttribute="trailing" secondItem="C4h-wq-PXe" secondAttribute="trailing" constant="16" id="rK3-tM-qXx"/>
+                                    <constraint firstItem="Qai-Ld-0yV" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" id="sMo-0e-Cl7"/>
+                                    <constraint firstItem="C4h-wq-PXe" firstAttribute="leading" secondItem="oSa-ns-Ndz" secondAttribute="leading" constant="16" id="tu4-8G-qls"/>
+                                    <constraint firstAttribute="trailing" secondItem="rob-9c-Ps1" secondAttribute="trailing" constant="16" id="uHI-SH-3zL"/>
+                                    <constraint firstAttribute="trailing" secondItem="SwR-51-SOw" secondAttribute="trailing" constant="16" id="xd1-yD-7I1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BG5-mK-RWq"/>
+                        <color key="backgroundColor" red="0.78600169099999995" green="0.80496907740000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="oSa-ns-Ndz" firstAttribute="centerX" secondItem="Kk4-0F-2Xx" secondAttribute="centerX" id="LLl-LY-dWY"/>
+                            <constraint firstItem="oSa-ns-Ndz" firstAttribute="top" secondItem="BG5-mK-RWq" secondAttribute="top" id="MFv-9m-WOy"/>
+                            <constraint firstItem="oSa-ns-Ndz" firstAttribute="leading" secondItem="BG5-mK-RWq" secondAttribute="leading" id="X5W-po-XxT"/>
+                            <constraint firstItem="oSa-ns-Ndz" firstAttribute="bottom" secondItem="BG5-mK-RWq" secondAttribute="bottom" id="paO-GC-efJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="llM-vY-Gel"/>
+                    <connections>
+                        <outlet property="characterDescription" destination="3BW-na-FVh" id="jf7-ut-X8j"/>
+                        <outlet property="characterImage" destination="Qai-Ld-0yV" id="NLT-MH-2po"/>
+                        <outlet property="characterName" destination="SwR-51-SOw" id="kxI-vT-Gft"/>
+                        <outlet property="characterRealName" destination="C4h-wq-PXe" id="zyr-dK-DlN"/>
+                        <outlet property="powerPercent" destination="ShW-7p-HPA" id="G8C-Fv-kis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfT-7p-xKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-117"/>
+        </scene>
+        <!--Hero & Villain-->
         <scene sceneID="bvS-Sl-bf4">
             <objects>
-                <tabBarController title="Marvel Heros &amp; Villains" id="7Mv-NX-OYn" sceneMemberID="viewController">
+                <tabBarController title="Hero &amp; Villain" id="7Mv-NX-OYn" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bPs-4Z-tZs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -171,6 +284,9 @@
             <point key="canvasLocation" x="-1259" y="54"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4M4-Wm-dDv"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="burn" catalog="system" width="128" height="121"/>
         <image name="img_iron_man" width="853.33331298828125" height="480"/>

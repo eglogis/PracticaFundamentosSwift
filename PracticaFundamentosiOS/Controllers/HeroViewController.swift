@@ -15,6 +15,7 @@ class HeroViewController: UIViewController {
     
     // MARK: - Propiedades privadas
     private let HERO_CELL_VIEW_NAME = "HeroCellView"
+    private let SEGUE_FROM_HERO_TO_DETAILS = "SEGUE_FROM_HERO_TO_DETAIL"
     private let heroRepository = HeroRepository()
     private var heros: Characters = []
     var herosCount: Int {
@@ -27,6 +28,14 @@ class HeroViewController: UIViewController {
         loadHeroData()
         heroList?.dataSource = self
         heroList?.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? CharacterDetailsViewController,
+              let data = sender as? Character else {
+            return
+        }
+        destination.character = data
     }
     
     // MARK: - Private functions
@@ -52,7 +61,12 @@ extension HeroViewController: UITableViewDelegate, UITableViewDataSource {
         if(indexPath.row < herosCount) {
             heroCell?.configureViews(hero: heros[indexPath.row])
         }
-        
         return heroCell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row < herosCount) {
+            performSegue(withIdentifier: SEGUE_FROM_HERO_TO_DETAILS, sender: heros[indexPath.row])
+        }
     }
 }
