@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="Yib-3h-UIS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="7Iw-GJ-eq7"/>
+                    <tabBarItem key="tabBarItem" title="Villains" image="burn" catalog="system" id="7Iw-GJ-eq7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oA-AA-kJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,14 +31,67 @@
                     <view key="view" contentMode="scaleToFill" id="tOJ-kD-Ofp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-lj-dCE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroCellView" rowHeight="248" id="bAE-e4-JGG" customClass="HeroCellView" customModule="PracticaFundamentosiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="248"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAE-e4-JGG" id="s83-0z-5IF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_iron_man" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-lQ-myk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                                                </imageView>
+                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c31-vk-24d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iron man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZ0-rK-t5d">
+                                                    <rect key="frame" x="137" y="105" width="140.5" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dZ0-rK-t5d" firstAttribute="centerY" secondItem="s83-0z-5IF" secondAttribute="centerY" id="Dfp-TF-rKY"/>
+                                                <constraint firstItem="dZ0-rK-t5d" firstAttribute="centerX" secondItem="s83-0z-5IF" secondAttribute="centerX" id="N9X-Cp-fTe"/>
+                                                <constraint firstItem="vrK-lQ-myk" firstAttribute="top" secondItem="s83-0z-5IF" secondAttribute="top" id="Nap-QR-L0K"/>
+                                                <constraint firstAttribute="bottom" secondItem="vrK-lQ-myk" secondAttribute="bottom" id="YjK-Zy-lNc"/>
+                                                <constraint firstAttribute="trailing" secondItem="vrK-lQ-myk" secondAttribute="trailing" id="hzj-Y9-j6U"/>
+                                                <constraint firstItem="vrK-lQ-myk" firstAttribute="leading" secondItem="s83-0z-5IF" secondAttribute="leading" id="nOR-U9-7P7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heroImage" destination="vrK-lQ-myk" id="QHe-dg-8Kc"/>
+                                            <outlet property="heroName" destination="dZ0-rK-t5d" id="5mv-MY-WJo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="k9b-nI-Cjr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k9b-nI-Cjr" firstAttribute="bottom" secondItem="EAe-lj-dCE" secondAttribute="bottom" id="SzO-VK-AcZ"/>
+                            <constraint firstItem="EAe-lj-dCE" firstAttribute="top" secondItem="k9b-nI-Cjr" secondAttribute="top" id="XGV-8r-AVo"/>
+                            <constraint firstItem="k9b-nI-Cjr" firstAttribute="trailing" secondItem="EAe-lj-dCE" secondAttribute="trailing" id="kYO-e7-Ihd"/>
+                            <constraint firstItem="EAe-lj-dCE" firstAttribute="leading" secondItem="k9b-nI-Cjr" secondAttribute="leading" id="vmz-Ql-HhA"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="61F-Pv-KcV"/>
+                    <tabBarItem key="tabBarItem" title="Heros" image="star.circle.fill" catalog="system" id="61F-Pv-KcV"/>
+                    <connections>
+                        <outlet property="heroList" destination="EAe-lj-dCE" id="V7V-VV-6st"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzc-6c-L5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="-320"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="-320.08928571428572"/>
         </scene>
         <!--Heros & Villains-->
         <scene sceneID="bvS-Sl-bf4">
@@ -48,6 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="pMk-mV-Z1C" kind="relationship" relationship="viewControllers" id="Lct-2G-XeX"/>
@@ -60,8 +114,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="burn" catalog="system" width="128" height="121"/>
+        <image name="img_iron_man" width="853.33331298828125" height="480"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

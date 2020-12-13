@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2840A17525858131004C0143 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A17425858131004C0143 /* Character.swift */; };
+		2840A17A2585837C004C0143 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A1792585837C004C0143 /* CharacterRepository.swift */; };
+		2840A17F25858804004C0143 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840A17E25858804004C0143 /* HeroCellView.swift */; };
 		285625DA25800C3B0016A0E5 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 285625D925800C3A0016A0E5 /* loading.json */; };
 		28687E50257FEF0300D50CE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 28687E4F257FEF0300D50CE5 /* Lottie */; };
 		2869E12B257F94A9002A4641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869E12A257F94A9002A4641 /* AppDelegate.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2840A17425858131004C0143 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		2840A1792585837C004C0143 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
+		2840A17E25858804004C0143 /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		285625D925800C3A0016A0E5 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		2869E127257F94A9002A4641 /* PracticaFundamentosiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaFundamentosiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2869E12A257F94A9002A4641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2840A172258580E9004C0143 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2840A17425858131004C0143 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2840A1782585834E004C0143 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2840A1792585837C004C0143 /* CharacterRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2840A17D258587D1004C0143 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2840A17E25858804004C0143 /* HeroCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		28687E52257FF3D400D50CE5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +108,8 @@
 		2869E129257F94A9002A4641 /* PracticaFundamentosiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2840A1782585834E004C0143 /* Repository */,
+				2840A172258580E9004C0143 /* Model */,
 				28687E52257FF3D400D50CE5 /* Assets */,
 				2869E141257F9550002A4641 /* Views */,
 				2869E140257F953C002A4641 /* Controllers */,
@@ -99,6 +131,7 @@
 		2869E140257F953C002A4641 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2840A17D258587D1004C0143 /* Cells */,
 				2869E12E257F94A9002A4641 /* MainViewController.swift */,
 				28F7D4AD25828AD80094E92B /* HeroViewController.swift */,
 				28F7D4B025828B720094E92B /* VillainsViewController.swift */,
@@ -230,9 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F7D4AE25828AD80094E92B /* HeroViewController.swift in Sources */,
+				2840A17525858131004C0143 /* Character.swift in Sources */,
 				2869E12F257F94A9002A4641 /* MainViewController.swift in Sources */,
 				28F7D4B125828B720094E92B /* VillainsViewController.swift in Sources */,
+				2840A17A2585837C004C0143 /* CharacterRepository.swift in Sources */,
 				2869E12B257F94A9002A4641 /* AppDelegate.swift in Sources */,
+				2840A17F25858804004C0143 /* HeroCellView.swift in Sources */,
 				2869E12D257F94A9002A4641 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
