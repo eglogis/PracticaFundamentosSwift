@@ -26,11 +26,11 @@ class CharacterDetailsViewController: UIViewController {
         super.viewDidLoad()
         if let data = character {
             characterImage?.image = UIImage(named: data.image ?? "")
-            characterName?.text = data.heroName
+            characterName?.text = data.name
             characterRealName?.text = data.realName
             characterDescription?.text = data.longDescription
             powerPercent?.progress = data.power / 100
-            navigationItem.title = data.heroName
+            navigationItem.title = data.name
         }
     }
 }

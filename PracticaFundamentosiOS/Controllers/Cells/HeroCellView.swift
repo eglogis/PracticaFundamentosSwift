@@ -26,6 +26,6 @@ class HeroCellView: UITableViewCell {
     
     func configureViews(hero: Character) {
         heroImage?.image = UIImage(named: hero.image ?? "")
-        heroName?.text = hero.heroName
+        heroName?.text = hero.name
     }
 }

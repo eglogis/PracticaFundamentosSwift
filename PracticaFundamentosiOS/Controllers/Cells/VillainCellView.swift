@@ -25,6 +25,6 @@ class VillainCellView: UITableViewCell {
     
     func configureViews(villain: Character) {
         villainImage?.image = UIImage(named: villain.image ?? "")
-        villainName?.text = villain.heroName
+        villainName?.text = villain.name
     }
 }

@@ -11,7 +11,7 @@ typealias Characters = [Character]
 
 struct Character {
     var image: String? = nil
-    var heroName: String = ""
+    var name: String = ""
     var realName: String = ""
     var longDescription: String = ""
     var shortDescription: String = ""

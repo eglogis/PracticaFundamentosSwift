@@ -87,6 +87,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2851D8D0258684910019BD2F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2840A172258580E9004C0143 /* Model */,
+				2840A1782585834E004C0143 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		28687E52257FF3D400D50CE5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +125,7 @@
 		2869E129257F94A9002A4641 /* PracticaFundamentosiOS */ = {
 			isa = PBXGroup;
 			children = (
-				2840A1782585834E004C0143 /* Repository */,
-				2840A172258580E9004C0143 /* Model */,
+				2851D8D0258684910019BD2F /* Domain */,
 				28687E52257FF3D400D50CE5 /* Assets */,
 				2869E141257F9550002A4641 /* Views */,
 				2869E140257F953C002A4641 /* Controllers */,
